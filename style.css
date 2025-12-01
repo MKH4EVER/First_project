@@ -1,0 +1,756 @@
+/* CSS variables for consistent theming */
+:root {
+    --text-color-simple: rgb(255, 255, 255);
+    --no-complients: rgba(255, 255, 255, 0.7);
+    --text-black: black;
+    --text-color-nav: rgba(24, 24, 24, 1);
+    --text-color-common: rgba(169, 169, 170, 1);
+    --text-color-paragraph: rgba(21, 21, 21, 0.6);
+    --color-bg: rgba(101, 98, 147, 1);
+    --color-ellipse: rgba(21, 21, 21, 0.1);
+    --color-forward: rgba(229, 244, 246, 1);
+    --font-family: 'Poppins';
+    --h-font-family: 'Roboto';
+}
+
+/* Global reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    transition: all 0.4s ease;
+}
+
+/* Smooth scrolling and base font size */
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+/* Header styling with background image */
+header {
+    background: url(/IMG/backgraund/bg\ \(2\).png) no-repeat center center / cover;
+    max-width: 100%;
+    height: 750px;
+}
+
+/* Body font setup */
+body {
+    font-family: 'Poppins';
+    font-family: 'Roboto';
+}
+
+/* Horizontal rule color */
+hr {
+    color: var(--text-color-simple);
+}
+
+/* Span element styling for accent text */
+span {
+    color: var(--color-bg);
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-weight: 800;
+    font-size: 68px;
+}
+
+/* Navigation bar layout */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4.5rem;
+}
+
+/* Navigation links container */
+.link-underline-primary {
+    display: flex;
+    gap: 3rem;
+}
+
+/* Navigation link styling */
+.link-underline-primary a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: 'Poppins';
+    color: var(--text-color-nav);
+}
+
+/* Navigation buttons container */
+.navigate-buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Register text styling */
+.navigate-buttons h1 {
+    text-transform: capitalize;
+    font-family: 'Poppins';
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+}
+
+/* Sign-in button styling */
+.navigate-buttons button {
+    border: none;
+    font-family: 'Poppins';
+    background-color: var(--color-bg);
+    color: var(--text-color-simple);
+    padding: 1rem 2.5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-radius: 14px;
+}
+
+/* Button press effect */
+.navigate-buttons button:active {
+    transform: translateY(0.35rem);
+}
+
+/* Hero text content styling */
+.content-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 10rem;
+    gap: 8rem;
+}
+
+/* Main heading in hero section */
+.content-txt h1 {
+    text-transform: capitalize;
+    font-size: 7.1rem;
+    width: 75rem;
+}
+
+/* Explore button styling */
+.content-txt button {
+    display: flex;
+    justify-content: start;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--text-black);
+}
+
+/* Arrow icon in explore button */
+.content-txt .bx-right-arrow-alt {
+    font-size: 2.5rem;
+    padding: 3px 0 0 15px;
+}
+
+/* Decorative content box styling */
+.common-content {
+    background: url(/IMG/backgraund/bg\ \(3\).png) no-repeat center center / cover;
+    width: 354px;
+    height: 444px;
+    border-radius: 125px;
+}
+
+/* Flight booking form container */
+.container-adult {
+    display: flex;
+    margin-top: 35px;
+    width: 1294px;
+    height: 285px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    padding: 15px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Trip options menu */
+.top-menu {
+    display: flex;
+    gap: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #222;
+}
+
+/* Dropdown menu container */
+.dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 24px;
+    left: 0;
+    background: var(--text-color-simple);
+    border: 1px solid var(--text-color-simple);
+    border-radius: 6px;
+    box-shadow: 0 2px 8px var(--text-black);
+    z-index: 10;
+}
+
+/* Dropdown menu items */
+.dropdown-menu div {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* Dropdown menu item hover effect */
+.dropdown-menu div:hover {
+    background: var(--text-color-simple);
+}
+
+/* Form section layout */
+.form-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Input box styling */
+.input-box {
+    flex: 1;
+    height: 110px;
+    border: 1px solid var(--text-black);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Input label styling */
+.label {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+/* Airport code styling */
+.code {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+}
+
+/* Subtext under airport code */
+.subtext {
+    font-size: 13px;
+    color: #666;
+    margin-top: 4px;
+}
+
+/* Swap airports button */
+.swap-btn {
+    background: var(--text-color-simple);
+    border: none;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+/* Calendar box styling */
+.calendar-box {
+    width: 220px;
+    height: 110px;
+    border: 1px solid var(--text-black);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Calendar header styling */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+/* Calendar navigation buttons */
+.calendar-header span {
+    font-size: 13px;
+    color: var(--color-ellipse);
+    cursor: pointer;
+}
+
+/* Form bottom row layout */
+.bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Button row layout */
+.bottom-rows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+/* Additional requirements link */
+.requirements {
+    font-size: 1.5rem;
+    color: var(--text-color-nav);
+    font-family: var(--font-family);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Book flights button */
+.book-btn {
+    background: var(--color-bg);
+    color: #f4f4f4;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    padding: 30px 25px 30px 35px;
+    border-radius: 18px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Book button press effect */
+.book-btn:active {
+    transform: translateY(0.35rem);
+}
+
+/* Hidden extra form */
+#extra-form {
+    display: none;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Confirmation message */
+#confirmation {
+    margin-top: 12px;
+    color: var(--green);
+    font-weight: bold;
+    display: none;
+}
+
+/* Section spacing */
+#fargona {
+    margin: 200px 0px;
+}
+
+/* Content container layout */
+.div-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+/* Section header styling */
+.hello {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+/* Section heading */
+.hello h1 {
+    font-size: 4rem;
+    font-family: 'Poppins';
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+/* Image container */
+.img-box {
+    position: relative;
+}
+
+/* Positioned image */
+.mine-max img {
+    position: absolute;
+    left: 20%;
+    top: 12.5%;
+}
+
+/* Text content styling */
+.subtexts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 13.5rem 0 0 0;
+}
+
+/* Subheading */
+.subtexts h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-color-nav);
+}
+
+/* Paragraph text */
+.subtexts p {
+    font-size: 1.6rem;
+    font-family: var(--font-family);
+    color: var(--text-color-paragraph);
+    width: 50rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    text-align: justify;
+}
+
+/* Image container */
+.img-quti {
+    position: relative;
+}
+
+/* Positioned image */
+.mine-middle {
+    position: absolute;
+    right: 0;
+    top: 15%;
+}
+
+/* Positioned image */
+.mine-mini {
+    position: absolute;
+    right: 20%;
+    margin-top: 6rem;
+}
+
+/* Section header styling */
+.hello-twice h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    font-family: var(--font-family);
+    margin-top: 10rem;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+/* Feature card styling */
+.pronunciation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    gap: 1rem;
+    min-width: 38rem;
+    height: 27rem;
+    padding: 5rem 1rem 0 1rem;
+    margin-top: 2rem;
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    color: var(--text-color-paragraph);
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    width: 25rem;
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+    transition: all 0.5s ease;
+}
+
+/* Feature card hover effect */
+.pronunciation:hover {
+    background-color: var(--color-bg);
+}
+
+/* Text color change on hover */
+.pronunciation:hover p {
+    color: var(--text-color-simple);
+}
+
+/* Heading color change on hover */
+.pronunciation:hover h4 {
+    color: var(--text-color-simple);
+}
+
+/* Feature card heading */
+.pronunciation h4 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-color-nav);
+    margin-bottom: 1rem;
+}
+
+/* Feature card text */
+.pronunciation p {
+    font-size: 1.6rem;
+    color: var(--text-color-paragraph);
+    line-height: 1.5;
+    letter-spacing: 1.15px;
+}
+
+/* Airplane image container */
+.plane-air {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Airplane press effect */
+.plane-air:active {
+    transform: translateY(-5rem);
+}
+
+/* Section header styling */
+.hello-three h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    font-family: var(--font-family);
+    margin: 10rem 0rem 5rem 0rem;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+/* Background element container */
+.fortanately {
+    position: relative;
+}
+
+/* Background decorative image */
+.fortanately img {
+    position: absolute;
+    z-index: -5;
+    left: 50rem;
+    top: -5em;
+    opacity: 50%;
+}
+
+/* Card container padding */
+.addEventListen {
+    padding-left: 2rem;
+}
+
+/* Jet model card styling */
+.card {
+    width: 90%;
+    height: 250px;
+    border: none;
+    border-radius: 14px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    padding: 2rem;
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-7.5px);
+}
+
+/* Card image styling */
+.card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 12px;
+}
+
+/* Card heading */
+.card h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    font-family: var(--font-family);
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--text-color-nav);
+    margin-top: 1rem;
+}
+
+/* Section header styling */
+.hello-four h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    font-family: var(--font-family);
+    margin: 10rem 0rem 15rem 0rem;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+/* Membership section bottom margin */
+.transition-familia {
+    margin-bottom: 10rem;
+}
+
+/* Pricing card styling */
+.price-maker {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    text-transform: capitalize;
+    width: 400px;
+    height: 570px;
+    background: rgba(245, 245, 245, 1);
+    border-radius: 20px;
+    padding: 2.5rem;
+    gap: 1rem;
+    transition: all 0.55s ease;
+}
+
+/* Pricing card hover effect */
+.price-maker:hover {
+    transform: translateY(-25px);
+    background-color: var(--color-bg);
+}
+
+/* Heading color change on hover */
+.price-maker:hover h1 {
+    color: var(--text-color-simple);
+}
+
+/* List item color change on hover */
+.price-maker:hover li {
+    color: var(--text-color-simple);
+}
+
+/* Icon color change on hover */
+.price-maker:hover i {
+    color: var(--text-color-simple);
+}
+
+/* Price color change on hover */
+.price-maker:hover h3 {
+    color: var(--text-color-simple);
+}
+
+/* Button press effect */
+.price-maker button:active {
+    transform: translateY(0.35rem);
+}
+
+/* Button color change on hover */
+.price-maker:hover button {
+    background: var(--text-color-simple);
+    color: var(--text-black);
+}
+
+/* Pricing card heading */
+.price-maker h1 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    padding-bottom: 3rem;
+    color: var(--text-color-nav);
+    font-family: var(--font-family);
+}
+
+/* Pricing card subheading */
+.price-maker h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: var(--text-color-common);
+    font-family: var(--font-family);
+}
+
+/* Pricing feature list */
+.price-maker li {
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--text-color-nav);
+    font-family: var(--font-family);
+    line-height: 35px;
+
+}
+
+/* Feature list icons */
+.price-maker li i {
+    color: var(--text-black);
+    margin-right: 10px;
+}
+
+/* Price display */
+.price-maker h3 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: var(--text-color-nav);
+    font-family: var(--font-family);
+    margin: 2rem 0;
+}
+
+/* Choose button styling */
+.price-maker button {
+    background: var(--color-bg);
+    color: var(--text-color-simple);
+    font-family: var(--font-family);
+    padding: 1.5rem 3rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-radius: 12px;
+    margin: 2rem 0;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer background */
+footer {
+    background-color: var(--color-bg);
+}
+
+/* Footer logo container */
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer logo image */
+.footer-logo img {
+    padding-top: 2.5rem;
+}
+
+/* Footer content layout */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Footer links container */
+.footer-links ul {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Footer link styling */
+.footer-links a {
+    text-decoration: none;
+    list-style: none;
+    color: var(--text-color-simple);
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: var(--font-family);
+}
+
+/* Copyright text styling */
+.footer-data a {
+    text-decoration: none;
+    color: var(--text-color-simple);
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: var(--font-family);
+}
