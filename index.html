@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sierra Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement" role="note">
+    <span class="pill badge">New</span>
+    <span>Introducing Sierra Studio — curated picks with free two-day delivery.</span>
+    <a href="#products" class="link">Shop the drop</a>
+  </div>
+
+  <header class="shell">
+    <div class="nav">
+      <div class="nav-left">
+        <span class="glyph"></span>
+        <span class="brand">Sierra Store</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#products">Shop</a>
+        <a href="#cart">Bag</a>
+        <a href="#checkout">Checkout</a>
+      </nav>
+      <div class="nav-actions">
+        <input id="search" class="search" type="search" placeholder="Search" aria-label="Search products" />
+        <button id="cartToggle" class="chip">Bag <span id="cartCount" class="pill">0</span></button>
+      </div>
+    </div>
+    <div class="nav-glow"></div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">New this season</p>
+        <h1>Beautifully simple shopping.</h1>
+        <p class="lede">Premium essentials designed to feel effortless. Crafted with quiet detail, ready for every moment.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#products">Shop now</a>
+          <a class="btn ghost" href="#checkout">Order pickup</a>
+        </div>
+        <div class="chips">
+          <span class="chip">Free delivery</span>
+          <span class="chip">Apple Pay ready</span>
+          <span class="chip">Flexible returns</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="device-card">
+          <div class="device-screen">
+            <div class="device-top">
+              <span class="pill small">Ultra comfort</span>
+              <span class="pill">2 colors</span>
+            </div>
+            <div class="device-title">Orbit Max</div>
+            <p class="device-caption">Spatial audio, adaptive fit, all-day battery.</p>
+          </div>
+          <div class="device-footer">
+            <div>
+              <span class="pill">$329</span>
+              <p class="meta">Ships in 24 hours</p>
+            </div>
+            <button class="btn secondary" aria-label="Order Orbit Max" data-add="orbit-max">Add to bag</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel highlights" aria-label="Store services">
+      <div class="highlight">
+        <div class="glyph"></div>
+        <div>
+          <h3>Only at Sierra</h3>
+          <p class="meta">Curated gear with exclusive finishes and limited drops.</p>
+        </div>
+      </div>
+      <div class="highlight">
+        <div class="glyph">↺</div>
+        <div>
+          <h3>Free returns</h3>
+          <p class="meta">30-day window with instant label generation.</p>
+        </div>
+      </div>
+      <div class="highlight">
+        <div class="glyph">⌁</div>
+        <div>
+          <h3>Fast delivery</h3>
+          <p class="meta">Two-day delivery on most items, overnight available.</p>
+        </div>
+      </div>
+      <div class="highlight">
+        <div class="glyph"></div>
+        <div>
+          <h3>Store pickup</h3>
+          <p class="meta">Reserve online and pick up in under two hours.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="products">
+      <header class="panel-header">
+        <div>
+          <p class="label">Featured lineup</p>
+          <h2>Signature products</h2>
+        </div>
+        <div class="controls">
+          <div id="filterBar" class="filter-bar"></div>
+          <select id="sort" class="select" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="new">Newest</option>
+          </select>
+        </div>
+      </header>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+
+    <section class="panel split" id="cart">
+      <div class="panel-left">
+        <header class="panel-header">
+          <div>
+            <p class="label">Bag</p>
+            <h2>Review your items</h2>
+          </div>
+          <button id="clearCart" class="btn ghost">Clear bag</button>
+        </header>
+        <div id="cartItems" class="cart-items"></div>
+      </div>
+      <aside class="panel-right">
+        <div class="summary">
+          <h3>Order summary</h3>
+          <div class="summary-row"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+          <div class="summary-row"><span>Shipping <span class="meta">(free over $500)</span></span><span id="shipping">$0.00</span></div>
+          <div class="summary-row total"><span>Total</span><span id="total">$0.00</span></div>
+          <button class="btn primary" href="#checkout">Checkout</button>
+        </div>
+      </aside>
+    </section>
+
+    <section class="panel" id="checkout">
+      <header class="panel-header">
+        <div>
+          <p class="label">Checkout</p>
+          <h2>Finish your order</h2>
+        </div>
+        <div class="pill-row">
+          <span class="pill">Secure payments</span>
+          <span class="pill">Encrypted checkout</span>
+          <span class="pill">30-day returns</span>
+        </div>
+      </header>
+      <form id="checkoutForm" class="form">
+        <div class="form-row">
+          <label>Full name<input name="name" required placeholder="Alex Doe" /></label>
+          <label>Email<input type="email" name="email" required placeholder="alex@email.com" /></label>
+        </div>
+        <div class="form-row">
+          <label>Address<input name="address" required placeholder="123 Market St" /></label>
+          <label>City<input name="city" required placeholder="San Francisco" /></label>
+        </div>
+        <div class="form-row">
+          <label>Card number<input name="card" required minlength="12" maxlength="19" placeholder="4242 4242 4242 4242" /></label>
+          <label>Expiry<input name="expiry" required placeholder="MM/YY" /></label>
+          <label>CVC<input name="cvc" required minlength="3" maxlength="4" placeholder="123" /></label>
+        </div>
+        <div class="form-actions">
+          <button class="btn primary" type="submit">Place order</button>
+          <p class="support">Need help? <a href="mailto:support@sierrastore.com">Email support</a></p>
+        </div>
+        <div id="checkoutMessage" class="toast" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="shell footer">
+    <div>
+      <h3>Sierra Store</h3>
+      <p>Minimal, thoughtful design with quick delivery and modern payments.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#products">Shop</a>
+      <a href="#cart">Bag</a>
+      <a href="#checkout">Checkout</a>
+    </div>
+    <p class="small">Built with accessibility, performance, and calm aesthetics.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
